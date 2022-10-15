@@ -1,0 +1,32 @@
+/* Root */
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.my-name {
+    font-size: 50px !important;
+    text-align: center;
+    justify-content: center;
+    color: darkgreen;
+}
+
+#body {
+    height: calc(100vh - 75px);
+}
+
+.content {
+    
+}
+
+.footer {
+    height: 60px;
+}
+
+
+
