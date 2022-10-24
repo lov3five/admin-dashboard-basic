@@ -14,36 +14,44 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- JavaScript Bundle with Popper -->
     <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+    <style>
+       
+    </style>
 </head>
 
 <body>
-    <img id="bg-img" src="../assets/img/background-login.jpg" class="img-fluid" alt="background-login">
-    <div class="container w-auto position-absolute top-50 start-50 translate-middle">
-        <form class="p-4 p-md-5 rounded-3 ">
-            <h4 class="text-center text-nowrap text-color">ĐĂNG NHẬP HỆ THỐNG QUẢN TRỊ</h4>
-            <span class="text-color bg-info bg-opacity-10 p-1 rounded-2">Nhập tài khoản và mật khẩu của bạn để truy cập bảng quản trị</span>
-            <div class="form-floating mb-3 mt-5">
-                <input type="email" class="form-control" id="username" placeholder="Tài khoản">
-                <label for="floatingInput">Tài khoản</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="password" placeholder="Mật khẩu">
-                <label for="floatingPassword">Mật khẩu</label>
-            </div>
-            <div class="checkbox mb-3">
-                <label>
-                    <input  type="checkbox" value=""> <span class="text-color">Nhớ mật khẩu</span>
-                </label>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Đăng nhập</button>
-            <hr class="my-4">
-            <div class="text-center">
-                <small class="text-muted">Developed by BETUer</small>
-            </div>
-        </form>
+    <div class="bg-image d-flex align-items-center">
+        <div  class="container w-auto">
+            <form id="form" class="p-4 p-md-5 rounded-3 ">
+                <h4 class="text-center text-color blink-text">ĐĂNG NHẬP HỆ THỐNG QUẢN TRỊ</h4>
+                <small
+                    class="d-flex justify-content-center text-center text-color bg-info bg-opacity-10 p-1 rounded-2 ">Nhập
+                    tài khoản và mật khẩu của bạn để truy cập
+                    bảng quản trị</small>
+                <div class="form-floating mb-3 mt-5">
+                    <input type="email" class="form-control" id="username" placeholder="Tài khoản">
+                    <label for="floatingInput">Tài khoản</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="Mật khẩu">
+                    <label for="floatingPassword">Mật khẩu</label>
+                </div>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value=""> <span class="text-color">Nhớ mật khẩu</span>
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Đăng nhập</button>
+                <hr class="my-4">
+                <div class="text-center">
+                    <small class="text-info">Developed by BETUer</small>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
