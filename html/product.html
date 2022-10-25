@@ -18,7 +18,7 @@
     <div class="container-fluid bg-dark">
         <!-- Body -->
         <div id="body" class=" d-flex flex-nowrap">
-            <div id="mySidebar" class="sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark collapse">
+            <div id="mySidebar" class="scrollbar sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark collapse">
 
                 <a href="./home.html"
                     class="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -99,126 +99,229 @@
                         </button>
                         <div class="collapse" id="orders-collapse">
                             <ul class=" btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">List
-                                        order</a></li>
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Order
+                                        list</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
+
+                    <li class="nav-item">
+                        <button href="#"
+                            class="w-100 btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed nav-link text-white"
+                            aria-current="page" data-bs-toggle="collapse" data-bs-target="#customers-collapse"
+                            aria-expanded="false">
+                            <i class="bi bi-people-fill"></i>
+                            Customers
+                            <span class="arrow-down"><i class=" bi bi-caret-down-fill"></i></span>
+                            <span class="arrow-up"><i class=" bi bi-caret-up-fill"></i></span>
+                        </button>
+                        <div class="collapse" id="customers-collapse">
+                            <ul class=" btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#"
+                                        class="link-light d-inline-flex text-decoration-none rounded">Overview</a></li>
+                                <li><a href="#"
+                                        class="link-light d-inline-flex text-decoration-none rounded">Updates</a>
+                                </li>
+                                <li><a href="#"
+                                        class="link-light d-inline-flex text-decoration-none rounded">Reports</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
-            </li>
-            <li class="nav-item">
-                <button href="#"
-                    class="w-100 btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed nav-link text-white"
-                    aria-current="page" data-bs-toggle="collapse" data-bs-target="#customers-collapse"
-                    aria-expanded="false">
-                    <i class="bi bi-people-fill"></i>
-                    Customers
-                    <span class="arrow-down"><i class=" bi bi-caret-down-fill"></i></span>
-                    <span class="arrow-up"><i class=" bi bi-caret-up-fill"></i></span>
-                </button>
-                <div class="collapse" id="customers-collapse">
-                    <ul class=" btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Overview</a></li>
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Updates</a>
-                        </li>
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Reports</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            </ul>
-
-        </div>
-        <!-- Content chức năng -->
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mySidebar"
+            <!-- Content chức năng -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mySidebar"
                         aria-current="page" aria-controls="navbarHeader" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span style="background-color: green;" class="navbar-toggler-icon"></span>
                     </button> -->
-                    <div class="col">
-                        <div
-                            class=" d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2 border-bottom">
-                            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
-                                aria-label="breadcrumb" class="">
-                                <ol class="breadcrumb ">
-                                    <li class="breadcrumb-item "><a class="text-decoration-none" href="#">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Overview</li>
-                                </ol>
-                            </nav>
-                            <div class="dropdown">
-                                <a href="#"
-                                    class="d-flex align-items-center link-light text-decoration-none dropdown-toggle"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="https://avatars.githubusercontent.com/u/67590509?v=4" alt="" width="32"
-                                        height="32" class="rounded-circle me-2">
-                                    <strong class="text-light">lov3five</strong>
-                                </a>
-                                <ul class="dropdown-menu text-small shadow">
-                                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                                </ul>
+                        <div id="content-header" class="col">
+                            <div
+                                class=" d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2 border-bottom">
+                                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                                    aria-label="breadcrumb" class="">
+                                    <ol class="breadcrumb ">
+                                        <li class="breadcrumb-item "><a class="text-decoration-none" href="#">Home</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">Overview</li>
+                                    </ol>
+                                </nav>
+                                <div class="dropdown">
+                                    <a href="#"
+                                        class="d-flex align-items-center link-light text-decoration-none dropdown-toggle"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="https://avatars.githubusercontent.com/u/67590509?v=4" alt=""
+                                            width="32" height="32" class="rounded-circle me-2">
+                                        <strong class="text-light">lov3five</strong>
+                                    </a>
+                                    <ul class="dropdown-menu text-small shadow">
+                                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+
+                    </div>
+                    <!-- Filter sort list -->
+                    <div class="row">
+                        filter
+                    </div>
+
+                    <!-- List product -->
+                    <div class="">
+                        <div class="mb-3 card">
+                            <div class="pb-0 card-body">
+                                <div class="row">
+                                    <div index="0" class="mb-4 col-lg-4 col-md-6">
+                                        <div
+                                            class="d-flex flex-column justify-content-between border rounded-1 h-100 pb-3">
+                                            <div class="overflow-hidden">
+                                                <div class="position-relative rounded-top overflow-hidden"><a
+                                                        class="d-block h-sm-100" href="GET{link to detail}"><img
+                                                            src="/assets/img/products/mouse-logitech-G305.jpg"
+                                                            alt="Logitech G305 Gaming Mouse"
+                                                            class="h-100 w-100 fit-cover rounded-top"></a>
+                                                </div>
+                                                <div class="p-3">
+                                                    <h5 class="fs-0"><a class="text-dark"
+                                                            href="GET{link to detail}">Logitech
+                                                            G305 Gaming Mouse</a></h5>
+                                                    <p class="fs--1 mb-3"><a class="text-500" href="#">Catetory</a></p>
+                                                    <h5
+                                                        class="fs-md-2 text-warning mb-0 d-flex align-items-center mb-3">
+                                                        $47.5<del class="ms-2 fs--1 text-500">$95</del></h5>
+                                                    <p class="fs--1 mb-1">Shipping Cost: <strong>$20</strong></p>
+                                                    <p class="fs--1 mb-1">Stock: <strong
+                                                            class="text-success">Available</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div index="0" class="mb-4 col-lg-4 col-md-6">
+                                        <div
+                                            class="d-flex flex-column justify-content-between border rounded-1 h-100 pb-3">
+                                            <div class="overflow-hidden">
+                                                <div class="position-relative rounded-top overflow-hidden"><a
+                                                        class="d-block h-sm-100" href="GET{link to detail}"><img
+                                                            src="/assets/img/products/mouse-logitech-G305.jpg"
+                                                            alt="Logitech G305 Gaming Mouse"
+                                                            class="h-100 w-100 fit-cover rounded-top"></a>
+                                                </div>
+                                                <div class="p-3">
+                                                    <h5 class="fs-0"><a class="text-dark"
+                                                            href="GET{link to detail}">Logitech
+                                                            G305 Gaming Mouse</a></h5>
+                                                    <p class="fs--1 mb-3"><a class="text-500" href="#">Catetory</a></p>
+                                                    <h5
+                                                        class="fs-md-2 text-warning mb-0 d-flex align-items-center mb-3">
+                                                        $47.5<del class="ms-2 fs--1 text-500">$95</del></h5>
+                                                    <p class="fs--1 mb-1">Shipping Cost: <strong>$20</strong></p>
+                                                    <p class="fs--1 mb-1">Stock: <strong
+                                                            class="text-success">Available</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div index="0" class="mb-4 col-lg-4 col-md-6">
+                                        <div
+                                            class="d-flex flex-column justify-content-between border rounded-1 h-100 pb-3">
+                                            <div class="overflow-hidden">
+                                                <div class="position-relative rounded-top overflow-hidden"><a
+                                                        class="d-block h-sm-100" href="GET{link to detail}"><img
+                                                            src="/assets/img/products/mouse-logitech-G305.jpg"
+                                                            alt="Logitech G305 Gaming Mouse"
+                                                            class="h-100 w-100 fit-cover rounded-top"></a>
+                                                </div>
+                                                <div class="p-3">
+                                                    <h5 class="fs-0"><a class="text-dark"
+                                                            href="GET{link to detail}">Logitech
+                                                            G305 Gaming Mouse</a></h5>
+                                                    <p class="fs--1 mb-3"><a class="text-500" href="#">Catetory</a></p>
+                                                    <h5
+                                                        class="fs-md-2 text-warning mb-0 d-flex align-items-center mb-3">
+                                                        $47.5<del class="ms-2 fs--1 text-500">$95</del></h5>
+                                                    <p class="fs--1 mb-1">Shipping Cost: <strong>$20</strong></p>
+                                                    <p class="fs--1 mb-1">Stock: <strong
+                                                            class="text-success">Available</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div index="0" class="mb-4 col-lg-4 col-md-6">
+                                        <div
+                                            class="d-flex flex-column justify-content-between border rounded-1 h-100 pb-3">
+                                            <div class="overflow-hidden">
+                                                <div class="position-relative rounded-top overflow-hidden"><a
+                                                        class="d-block h-sm-100" href="GET{link to detail}"><img
+                                                            src="/assets/img/products/mouse-logitech-G305.jpg"
+                                                            alt="Logitech G305 Gaming Mouse"
+                                                            class="h-100 w-100 fit-cover rounded-top"></a>
+                                                </div>
+                                                <div class="p-3">
+                                                    <h5 class="fs-0"><a class="text-dark"
+                                                            href="GET{link to detail}">Logitech
+                                                            G305 Gaming Mouse</a></h5>
+                                                    <p class="fs--1 mb-3"><a class="text-500" href="#">Catetory</a></p>
+                                                    <h5
+                                                        class="fs-md-2 text-warning mb-0 d-flex align-items-center mb-3">
+                                                        $47.5<del class="ms-2 fs--1 text-500">$95</del></h5>
+                                                    <p class="fs--1 mb-1">Shipping Cost: <strong>$20</strong></p>
+                                                    <p class="fs--1 mb-1">Stock: <strong
+                                                            class="text-success">Available</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div index="0" class="mb-4 col-lg-4 col-md-6">
+                                        <div
+                                            class="d-flex flex-column justify-content-between border rounded-1 h-100 pb-3">
+                                            <div class="overflow-hidden">
+                                                <div class="position-relative rounded-top overflow-hidden"><a
+                                                        class="d-block h-sm-100" href="GET{link to detail}"><img
+                                                            src="/assets/img/products/mouse-logitech-G305.jpg"
+                                                            alt="Logitech G305 Gaming Mouse"
+                                                            class="h-100 w-100 fit-cover rounded-top"></a>
+                                                </div>
+                                                <div class="p-3">
+                                                    <h5 class="fs-0"><a class="text-dark"
+                                                            href="GET{link to detail}">Logitech
+                                                            G305 Gaming Mouse</a></h5>
+                                                    <p class="fs--1 mb-3"><a class="text-500" href="#">Catetory</a></p>
+                                                    <h5
+                                                        class="fs-md-2 text-warning mb-0 d-flex align-items-center mb-3">
+                                                        $47.5<del class="ms-2 fs--1 text-500">$95</del></h5>
+                                                    <p class="fs--1 mb-1">Shipping Cost: <strong>$20</strong></p>
+                                                    <p class="fs--1 mb-1">Stock: <strong
+                                                            class="text-success">Available</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!--  -->
-
-                </div>
-                <div class="row">
-        <!-- Danh sách sản phẩm -->
-        <ul class="row dashboard-list">
-            <!-- <li class="col-lg-3 col-6">
-                <a class="d-block" href="#">
-                    <img class="img-fluid" src="{url-product}" />
-                    <span>{name-product}</span>
-                </a>
-            </li> -->
-            <li class="col-lg-3 col-6">
-                <a class="d-block" href="#">
-                    <img class="img-fluid" src="https://cdn.tgdd.vn//content/Laptop-129x129.png" />
-                    <span>Laptop</span>
-                </a>
-            </li>
-            <li class="col-lg-3 col-6">
-                <a class="d-block" href="#">
-                    <img class="img-fluid" src="https://cdn.tgdd.vn//content/Tablet-128x129.png" />
-                    <span>Tablet</span>
-                </a>
-            </li>
-            <li class="col-lg-3 col-6">
-                <a class="d-block" href="#">
-                    <img class="img-fluid" src="https://cdn.tgdd.vn//content/Donghothongminh-128x129.png" />
-                    <span>Dồng hồ</span>
-                </a>
-            </li>
-            <li class="col-lg-3 col-6">
-                <a class="d-block" href="#">
-                    <img class="img-fluid" src="https://cdn.tgdd.vn//content/Thietbimang-128x129.png" />
-                    <span>Thiết bị mạng</span>
-                </a>
-            </li>
-            <li class="col-lg-3 col-6">
-                <a class="d-block" href="#">
-                    <img class="img-fluid" src="https://cdn.tgdd.vn//content/Manhinhmaytinh-128x129.png" />
-                    <span>Màn hình máy tính</span>
-                </a>
-            </li>
-         
-        </ul>
                 </div>
             </div>
+
+
         </div>
-
-
-    </div>
     </div>
     <div class="footer container-fluid text-center">
 
