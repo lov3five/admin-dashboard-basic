@@ -79,10 +79,7 @@ body {
     margin-left: 1.25rem;
 }
 
-.btn-toggle-nav a:hover,
-.btn-toggle-nav a:focus {
-    background: var(--bg-color-gradient);
-}
+
 
 .arrow-down {
     flex: 2;
@@ -147,6 +144,20 @@ body {
     
 }
 
+#imgOutputForm {
+    display: none;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+    margin: auto;
+}
+
+
+#form-add-product {
+    display: none;
+}
 
 
 /* Footer */

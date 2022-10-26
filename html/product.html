@@ -76,13 +76,10 @@
                         </button>
                         <div class="collapse" id="products-collapse">
                             <ul class=" btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Product
+                                <li><a href="#" onclick="displayLayoutProduct()" class="nav-link link-light d-inline-flex text-decoration-none rounded">Product
                                         list</a></li>
-                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Add
+                                <li><a href="#" onclick="displayFormProduct()" class="nav-link link-light d-inline-flex text-decoration-none rounded">Add
                                         product</a>
-                                </li>
-                                <li><a href="#"
-                                        class="link-light d-inline-flex text-decoration-none rounded">Reports</a>
                                 </li>
                             </ul>
                         </div>
@@ -99,7 +96,7 @@
                         </button>
                         <div class="collapse" id="orders-collapse">
                             <ul class=" btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">List
+                                <li><a href="#" class="nav-link link-light d-inline-flex text-decoration-none rounded">List
                                         order</a></li>
 
                     </li>
@@ -112,16 +109,16 @@
                     aria-current="page" data-bs-toggle="collapse" data-bs-target="#customers-collapse"
                     aria-expanded="false">
                     <i class="bi bi-people-fill"></i>
-                    Customers
+                    Accounts
                     <span class="arrow-down"><i class=" bi bi-caret-down-fill"></i></span>
                     <span class="arrow-up"><i class=" bi bi-caret-up-fill"></i></span>
                 </button>
                 <div class="collapse" id="customers-collapse">
                     <ul class=" btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Overview</a></li>
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Updates</a>
+                        <li><a href="#" class="nav-link link-light d-inline-flex text-decoration-none rounded">Overview</a></li>
+                        <li><a href="#" class="nav-link link-light d-inline-flex text-decoration-none rounded">Updates</a>
                         </li>
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Reports</a>
+                        <li><a href="#" class="nav-link link-light d-inline-flex text-decoration-none rounded">Reports</a>
                         </li>
                     </ul>
                 </div>
@@ -179,6 +176,46 @@
                     <!--  -->
                 </div>
                 <div class="row">
+                    <!-- Form add product hard -->
+                    <div id="form-add-product" class=" bg-light rounded-2 mx-auto mt-5">
+                        <form class="row g-3"> 
+                            <div class="col-md-3">
+                                <label for="category" class="form-label">Category</label>
+                                <select class="form-select" aria-label="Default select example" id="category">
+                                    <option selected>...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="product-id" class="form-label">Product ID</label>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="product-quanlity" class="form-label">Quanlity</label>
+                                <input type="number" class="form-control" id="product-quanlity">
+                            </div>
+                            <div class="col-md-5">
+                                <label for="product-name" class="form-label">Product name</label>
+                                <input type="text" class="form-control" id="product-name">
+                            </div>
+                            <div class="col-12">
+                                <label for="product-desc" class="form-label">Description</label>
+                                <textarea class="form-control" id="product-desc" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="col-4">
+                                <label for="product-img" class="form-label">Product image</label>
+                                <input type="file" class="form-control" id="product-img" accept="image/*" onchange="loadFile2(event)">
+                            </div>
+                            <div class="col-md-8">
+                                <img id="imgOutputForm" class="text-center" src="" alt="">
+                            </div>
+                            <div class="col-12 mb-5 w-100">
+                                <button type="submit" class="btn btn-primary w-25">Add</button>
+                            </div>
+                        </form>
+                    </div>
                     <!-- List product -->
                     <div id="layout-product">
                         <div class="mb-3 card">
@@ -313,12 +350,12 @@
                         <div class="mb-3">
                             <label for="product-img" class="col-form-label">Product image:</label>
                             <input type="file" class="form-control" id="product-img" accept="image/*"
-                                onchange="loadFile(event)">
-                            <img id="imgOutput" src="" alt="" width="200px" style="margin: auto; margin-top: 10px;">
+                                onchange="loadFile1(event)">
+                            <img id="imgOutput" src="" alt="" style="margin: auto; margin-top: 10px;">
                         </div>
                         <div class="mb-3">
                             <label for="product-desc" class="col-form-label">Product description:</label>
-                            <input type="text" class="form-control" id="product-desc">
+                            <textarea class="form-control" id="product-desc"></textarea>
 
                         </div>
                     </form>
@@ -330,6 +367,8 @@
             </div>
         </div>
     </div>
+
+
 
     <div class="footer container-fluid text-center">
         <small class="text-center text-muted">Design by BETUer</small>
@@ -348,11 +387,31 @@
             });
         }
 
-        var loadFile = function (event) {
+        var loadFile1 = function (event) {
             var image = document.getElementById('imgOutput');
             image.style.display = "block";
             image.src = URL.createObjectURL(event.target.files[0]);
         };
+
+        var loadFile2 = function (event) {
+            var image = document.getElementById('imgOutputForm');
+            image.style.display = "block";
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+
+        var displayFormProduct = function () {
+            var formProduct = document.getElementById('form-add-product');
+            formProduct.style.display = "block";
+            var layoutProduct = document.getElementById('layout-product');
+            layoutProduct.style.display = "none";
+        }
+
+        var displayLayoutProduct = function () {
+            var formProduct = document.getElementById('form-add-product');
+            formProduct.style.display = "none";
+            var layoutProduct = document.getElementById('layout-product');
+            layoutProduct.style.display = "";
+        }
 
     </script>
 

@@ -79,7 +79,8 @@
                                 <li><a href="./product.html"
                                         class="link-light d-inline-flex text-decoration-none rounded">Product list</a>
                                 </li>
-                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Add
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#addProductModal"
+                                        class="link-light d-inline-flex text-decoration-none rounded">Add
                                         product</a>
                                 </li>
                                 <li><a href="#"
@@ -113,7 +114,7 @@
                     aria-current="page" data-bs-toggle="collapse" data-bs-target="#customers-collapse"
                     aria-expanded="false">
                     <i class="bi bi-people-fill"></i>
-                    Customers
+                    Accounts
                     <span class="arrow-down"><i class=" bi bi-caret-down-fill"></i></span>
                     <span class="arrow-up"><i class=" bi bi-caret-up-fill"></i></span>
                 </button>
@@ -179,7 +180,8 @@
                                 <div class="box-item d-block mb-4 mt-4">
                                     <a href="#">
                                         <div class="img-chucnang">
-                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png" alt="" srcset="">
+                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png"
+                                                alt="" srcset="">
                                         </div>
                                         <span class="name-chucnang">Home</span>
                                     </a>
@@ -189,7 +191,8 @@
                                 <div class="box-item d-block mb-4 mt-4">
                                     <a href="#">
                                         <div class="img-chucnang">
-                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png" alt="" srcset="">
+                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png"
+                                                alt="" srcset="">
                                         </div>
                                         <span class="name-chucnang">Home</span>
                                     </a>
@@ -199,7 +202,8 @@
                                 <div class="box-item d-block mb-4 mt-4">
                                     <a href="#">
                                         <div class="img-chucnang">
-                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png" alt="" srcset="">
+                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png"
+                                                alt="" srcset="">
                                         </div>
                                         <span class="name-chucnang">Home</span>
                                     </a>
@@ -209,7 +213,8 @@
                                 <div class="box-item d-block mb-4 mt-4">
                                     <a href="#">
                                         <div class="img-chucnang">
-                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png" alt="" srcset="">
+                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png"
+                                                alt="" srcset="">
                                         </div>
                                         <span class="name-chucnang">Home</span>
                                     </a>
@@ -219,7 +224,8 @@
                                 <div class="box-item d-block mb-4 mt-4">
                                     <a href="#">
                                         <div class="img-chucnang">
-                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png" alt="" srcset="">
+                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png"
+                                                alt="" srcset="">
                                         </div>
                                         <span class="name-chucnang">Home</span>
                                     </a>
@@ -229,7 +235,8 @@
                                 <div class="box-item d-block mb-4 mt-4">
                                     <a href="#">
                                         <div class="img-chucnang">
-                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png" alt="" srcset="">
+                                            <img class="img-fluid" src="../assets/img/icon-overview/home-icon.png"
+                                                alt="" srcset="">
                                         </div>
                                         <span class="name-chucnang">Home</span>
                                     </a>
@@ -259,7 +266,15 @@
                 this.className += " active";
             });
         }
+
+        var loadFile2 = function (event) {
+            var image = document.getElementById('imgOutputForm');
+            image.style.display = "block";
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
     </script>
+
+    
 
 </body>
 
