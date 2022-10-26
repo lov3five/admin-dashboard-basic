@@ -9,22 +9,14 @@
     margin: 0;
 }
 
-html {
-    height: -webkit-fill-available;
-}
+
+
+html {}
 
 body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-    
+    overflow: hidden;
 }
 
-.content::-webkit-scrollbar {
-    width: 5px;
-}
-.content::-webkit-scrollbar-thumb {
-    background-color:#808080;
-}
 
 .my-name {
     font-size: 38px !important;
@@ -34,8 +26,15 @@ body {
 
 }
 
+.header-nav {
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+
 #body {
     background-color: rgb(13, 9, 22);
+    height: calc(100vh - 60px);
 }
 
 #mySidebar {
@@ -44,14 +43,18 @@ body {
 
 .content {
     flex: 8;
-    position: relative;
+    overflow-y: scroll;
 }
 
-.content #content-header {
-    position: sticky;
-    z-index: 1000;
-    top: 0;
+.content::-webkit-scrollbar {
+    width: 5px;
 }
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #00c6ff;
+    border-radius: 10px;
+}
+
 
 .nav-item .active {
     background: #00c6ff;
@@ -100,17 +103,45 @@ body {
 
 
 .fs--1 {
-    font-size: .8333333333rem!important;
+    font-size: .8333333333rem !important;
 }
 
 .fs-0 a {
     text-decoration: none;
-} 
+}
+
+
+.box-item{
+    padding: 20px;
+    border: 1px solid aqua;
+    border-radius: 10px;
+}
+
+.name-chucnang {
+    display: flex;
+    font-weight: 700;
+    color: #0072ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 150%;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.box-item a .img-chucnang img {
+    transform: scale(0.7);
+    transition: 0.5s;
+}
+
+.box-item a:hover .img-chucnang img{
+    transform: scale(0.9);
+}
+
+
 
 /* Footer */
 .footer {
     position: sticky;
-    bottom: 0;
     height: 60px;
     background-color: darkgreen;
+    z-index: 1000;
 }
