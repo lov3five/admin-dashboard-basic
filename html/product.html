@@ -20,7 +20,7 @@
         <div id="body" class=" d-flex flex-nowrap">
             <div id="mySidebar" class="sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark collapse">
 
-                <a href="./home.html"
+                <a href="./index.html"
                     class="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <img src="../assets/icon/favicon-main.png" width="15%" alt="" srcset="">
                     <span class="fs-4 my-name ms-2">BETU</span>
@@ -132,24 +132,32 @@
         <!-- Content chức năng -->
         <div class="content">
             <div class="container-fluid">
-                <div class="row">
+                <div id="header-nav" class="row">
                     <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mySidebar"
                         aria-current="page" aria-controls="navbarHeader" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span style="background-color: green;" class="navbar-toggler-icon"></span>
                     </button> -->
-                    <div class="col header-nav">
+                    <div class="col ">
                         <div
-                            class=" d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2 border-bottom">
+                            class="temp d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2 border-bottom">
                             <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
                                 aria-label="breadcrumb" class="">
                                 <ol class="breadcrumb ">
-                                    <li class="breadcrumb-item "><a class="text-decoration-none " href="./home.html">Home</a>
+                                    <li class="breadcrumb-item "><a class="text-decoration-none "
+                                            href="./index.html">Home</a>
                                     </li>
                                     <li class="breadcrumb-item active text-white" aria-current="page">Overview</li>
                                 </ol>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-success d-flex align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#addProductModal">
+                                    Add product
+                                </button>
                             </nav>
-                            <div class="dropdown">
+
+                            <div class="dropdown ">
                                 <a href="#"
                                     class="d-flex align-items-center link-light text-decoration-none dropdown-toggle"
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -172,7 +180,7 @@
                 </div>
                 <div class="row">
                     <!-- List product -->
-                    <div class="layout-product">
+                    <div id="layout-product">
                         <div class="mb-3 card">
                             <div class="pb-0 card-body">
                                 <div class="row">
@@ -274,7 +282,55 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal add product -->
+    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">ADD PRODUCT</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="product-id" class="col-form-label">Product ID:</label>
+                            <input type="text" class="form-control" id="product-id">
+                        </div>
+                        <div class="mb-3">
+                            <label for="category" class="col-form-label">Category:</label>
+                            <select class="form-select" aria-label="Default select example" id="category">
+                                <option selected>...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="product-name" class="col-form-label">Product name:</label>
+                            <input type="text" class="form-control" id="product-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="product-img" class="col-form-label">Product image:</label>
+                            <input type="file" class="form-control" id="product-img" accept="image/*"
+                                onchange="loadFile(event)">
+                            <img id="imgOutput" src="" alt="" width="200px" style="margin: auto; margin-top: 10px;">
+                        </div>
+                        <div class="mb-3">
+                            <label for="product-desc" class="col-form-label">Product description:</label>
+                            <input type="text" class="form-control" id="product-desc">
+
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div class="footer container-fluid text-center">
         <small class="text-center text-muted">Design by BETUer</small>
     </div>
@@ -291,6 +347,13 @@
                 this.className += " active";
             });
         }
+
+        var loadFile = function (event) {
+            var image = document.getElementById('imgOutput');
+            image.style.display = "block";
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+
     </script>
 
 </body>

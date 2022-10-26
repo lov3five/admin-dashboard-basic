@@ -26,10 +26,11 @@ body {
 
 }
 
-.header-nav {
+#header-nav {
     position: sticky;
     top: 0;
     z-index: 1020;
+    background-color: #212529;
 }
 
 #body {
@@ -110,10 +111,9 @@ body {
     text-decoration: none;
 }
 
-
 .box-item{
     padding: 20px;
-    border: 1px solid aqua;
+    border: 1px solid rgb(94, 94, 94);
     border-radius: 10px;
 }
 
@@ -134,6 +134,17 @@ body {
 
 .box-item a:hover .img-chucnang img{
     transform: scale(0.9);
+}
+
+#imgOutput {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+    
 }
 
 
