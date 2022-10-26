@@ -16,9 +16,15 @@ html {
 body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
+    
 }
 
-
+.content::-webkit-scrollbar {
+    width: 5px;
+}
+.content::-webkit-scrollbar-thumb {
+    background-color:#808080;
+}
 
 .my-name {
     font-size: 38px !important;
@@ -38,17 +44,13 @@ body {
 
 .content {
     flex: 8;
+    position: relative;
 }
 
 .content #content-header {
     position: sticky;
     z-index: 1000;
     top: 0;
-}
-
-.footer {
-    height: 60px;
-    background-color: darkgreen;
 }
 
 .nav-item .active {
@@ -58,14 +60,6 @@ body {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #00c6ff, #0072ff);
 }
-
-.scrollbar {
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.nav-item .collapsed.show {}
 
 /* Get from BS5 slidebars.css */
 .btn-toggle {
@@ -85,8 +79,6 @@ body {
 .btn-toggle-nav a:focus {
     background: var(--bg-color-gradient);
 }
-
-.collapse {}
 
 .arrow-down {
     flex: 2;
@@ -115,7 +107,10 @@ body {
     text-decoration: none;
 } 
 
+/* Footer */
 .footer {
     position: sticky;
     bottom: 0;
+    height: 60px;
+    background-color: darkgreen;
 }
